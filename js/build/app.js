@@ -1,7 +1,7 @@
 define(["require", "exports", "libs/ClassA"], function (require, exports, ClassA_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    // Debugging in browser:
+    // To debugg in browser, change disableCaching to false:
     Ext.Loader.setConfig({
         disableCaching: !true
     });
@@ -15,22 +15,12 @@ define(["require", "exports", "libs/ClassA"], function (require, exports, ClassA
         requires: [
             'App.libs.AjaxHandlers'
         ],
-        /*controllers: [
+        controllers: [
             'Main'
-        ],*/
+        ],
         launch: function () {
-            //App.libs.AjaxHandlers.Init();
+            App.libs.AjaxHandlers.Init();
             return true;
-        },
-        onAppUpdate: function () {
-            /*Ext.MessageBox.confirm(
-                'Application Update', 'This application has an update, reload?',
-                function (choice: string) {
-                    if (choice === 'yes')
-                        window.location.reload();
-                },
-                this
-            );*/
         }
     });
 });

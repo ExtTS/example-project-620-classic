@@ -1,7 +1,7 @@
 Ext.define('App.libs.AjaxHandlers', {
     statics: {
         Init: function () {
-            Ext.Ajax.on('requestexception', function (conn, response, options) {
+            Ext.Ajax.on('requestexception', function (conn, response, options, eOpts) {
                 //
             });
             window.onerror = function (message, source, lineno, colno, error) {
